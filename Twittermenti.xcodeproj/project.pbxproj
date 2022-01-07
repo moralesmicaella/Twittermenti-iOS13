@@ -11,6 +11,8 @@
 		2454C3F82787E96D007351E3 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 2454C3F72787E96D007351E3 /* Swifter */; };
 		2454C3FD2787F164007351E3 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2454C3FC2787F164007351E3 /* Secrets.plist */; };
 		2454C3FF2787F2C1007351E3 /* TweetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454C3FE2787F2C1007351E3 /* TweetManager.swift */; };
+		2454C4022788045B007351E3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2454C4012788045B007351E3 /* SwiftyJSON */; };
+		2454C40427880A26007351E3 /* SentimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454C40327880A26007351E3 /* SentimentManager.swift */; };
 		AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */; };
 		AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC65120FE2EF4002AE9BF /* ViewController.swift */; };
 		AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65320FE2EF4002AE9BF /* Main.storyboard */; };
@@ -23,6 +25,7 @@
 		2454C3F42787E033007351E3 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		2454C3FC2787F164007351E3 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		2454C3FE2787F2C1007351E3 /* TweetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetManager.swift; sourceTree = "<group>"; };
+		2454C40327880A26007351E3 /* SentimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentManager.swift; sourceTree = "<group>"; };
 		AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9EC65120FE2EF4002AE9BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2454C4022788045B007351E3 /* SwiftyJSON in Frameworks */,
 				2454C3F82787E96D007351E3 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				2454C3FE2787F2C1007351E3 /* TweetManager.swift */,
+				2454C40327880A26007351E3 /* SentimentManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			name = Twittermenti;
 			packageProductDependencies = (
 				2454C3F72787E96D007351E3 /* Swifter */,
+				2454C4012788045B007351E3 /* SwiftyJSON */,
 			);
 			productName = Twittermenti;
 			productReference = AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */;
@@ -152,6 +158,7 @@
 			mainGroup = AD9EC64320FE2EF4002AE9BF;
 			packageReferences = (
 				2454C3F62787E96D007351E3 /* XCRemoteSwiftPackageReference "Swifter" */,
+				2454C4002788045B007351E3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = AD9EC64D20FE2EF4002AE9BF /* Products */;
 			projectDirPath = "";
@@ -182,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2454C40427880A26007351E3 /* SentimentManager.swift in Sources */,
 				2454C3F52787E033007351E3 /* TweetSentimentClassifier.mlmodel in Sources */,
 				2454C3FF2787F2C1007351E3 /* TweetManager.swift in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
@@ -397,6 +405,14 @@
 				minimumVersion = 2.5.0;
 			};
 		};
+		2454C4002788045B007351E3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -404,6 +420,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2454C3F62787E96D007351E3 /* XCRemoteSwiftPackageReference "Swifter" */;
 			productName = Swifter;
+		};
+		2454C4012788045B007351E3 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2454C4002788045B007351E3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
