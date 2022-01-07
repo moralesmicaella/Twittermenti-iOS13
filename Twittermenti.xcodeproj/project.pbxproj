@@ -13,6 +13,9 @@
 		2454C3FF2787F2C1007351E3 /* TweetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454C3FE2787F2C1007351E3 /* TweetManager.swift */; };
 		2454C4022788045B007351E3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2454C4012788045B007351E3 /* SwiftyJSON */; };
 		2454C40427880A26007351E3 /* SentimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454C40327880A26007351E3 /* SentimentManager.swift */; };
+		2454C407278821DD007351E3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2454C406278821DD007351E3 /* Lottie */; };
+		2454C409278828B2007351E3 /* Animations in Resources */ = {isa = PBXBuildFile; fileRef = 2454C408278828B2007351E3 /* Animations */; };
+		2454C40C27883648007351E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2454C40B27883648007351E3 /* IQKeyboardManagerSwift */; };
 		AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */; };
 		AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC65120FE2EF4002AE9BF /* ViewController.swift */; };
 		AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65320FE2EF4002AE9BF /* Main.storyboard */; };
@@ -26,6 +29,7 @@
 		2454C3FC2787F164007351E3 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		2454C3FE2787F2C1007351E3 /* TweetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetManager.swift; sourceTree = "<group>"; };
 		2454C40327880A26007351E3 /* SentimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentManager.swift; sourceTree = "<group>"; };
+		2454C408278828B2007351E3 /* Animations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animations; sourceTree = "<group>"; };
 		AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9EC65120FE2EF4002AE9BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +46,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2454C4022788045B007351E3 /* SwiftyJSON in Frameworks */,
+				2454C40C27883648007351E3 /* IQKeyboardManagerSwift in Frameworks */,
 				2454C3F82787E96D007351E3 /* Swifter in Frameworks */,
+				2454C407278821DD007351E3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 				2454C3FB2787EDF2007351E3 /* Model */,
 				2454C3FA2787EDEB007351E3 /* View */,
 				2454C3F92787EDD5007351E3 /* Controller */,
+				2454C408278828B2007351E3 /* Animations */,
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
 				2454C3F42787E033007351E3 /* TweetSentimentClassifier.mlmodel */,
@@ -126,6 +133,8 @@
 			packageProductDependencies = (
 				2454C3F72787E96D007351E3 /* Swifter */,
 				2454C4012788045B007351E3 /* SwiftyJSON */,
+				2454C406278821DD007351E3 /* Lottie */,
+				2454C40B27883648007351E3 /* IQKeyboardManagerSwift */,
 			);
 			productName = Twittermenti;
 			productReference = AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */;
@@ -159,6 +168,8 @@
 			packageReferences = (
 				2454C3F62787E96D007351E3 /* XCRemoteSwiftPackageReference "Swifter" */,
 				2454C4002788045B007351E3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				2454C405278821DC007351E3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				2454C40A27883648007351E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = AD9EC64D20FE2EF4002AE9BF /* Products */;
 			projectDirPath = "";
@@ -177,6 +188,7 @@
 				AD9EC65A20FE2EF7002AE9BF /* LaunchScreen.storyboard in Resources */,
 				2454C3FD2787F164007351E3 /* Secrets.plist in Resources */,
 				AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */,
+				2454C409278828B2007351E3 /* Animations in Resources */,
 				AD9EC66220FE319B002AE9BF /* README.md in Resources */,
 				AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */,
 			);
@@ -413,6 +425,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		2454C405278821DC007351E3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+		2454C40A27883648007351E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -425,6 +453,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2454C4002788045B007351E3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		2454C406278821DD007351E3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2454C405278821DC007351E3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		2454C40B27883648007351E3 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2454C40A27883648007351E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

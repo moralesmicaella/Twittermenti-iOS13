@@ -8,19 +8,22 @@
 
 import UIKit
 import Swifter
+import Lottie
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var sentimentLabel: UILabel!
-    
+    @IBOutlet var animationView: AnimationView!
+        
     let tweetManager = TweetManager()
     var sentimentManager = SentimentManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textField.delegate = self
+        setAnimationConfig()
     }
 
     @IBAction func predictPressed(_ sender: Any) {
@@ -28,30 +31,46 @@ class ViewController: UIViewController {
             tweetManager.fetchTweets(with: searchText) { tweets in
                 if let tweets = tweets {
                     let sentimentScore = self.sentimentManager.getSentiment(of: tweets)
-                    print(sentimentScore)
                     self.setSentimentLabel(using: sentimentScore)
                 }
             }
         }
+        textField.resignFirstResponder()
     }
+    
+    func setAnimationConfig() {
+        animationView.animation = Animation.named("Animations/calm")
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        
+        animationView.play()
+    }
+    
     
     func setSentimentLabel(using sentimentScore: Int) {
         if sentimentScore > 20 {
-            sentimentLabel.text = "😍"
+            animationView.animation = Animation.named("Animations/heart-eyes")
         } else if sentimentScore > 10 {
-            sentimentLabel.text = "😃"
+            animationView.animation = Animation.named("Animations/laughing")
         } else if sentimentScore > 0 {
-            sentimentLabel.text = "🙂"
+            animationView.animation = Animation.named("Animations/happy")
         } else if sentimentScore == 0 {
-            sentimentLabel.text = "😐"
+            animationView.animation = Animation.named("Animations/calm")
         } else if sentimentScore > -10 {
-            sentimentLabel.text = "😕"
+            animationView.animation = Animation.named("Animations/grieved")
         } else if sentimentScore > -20  {
-            sentimentLabel.text = "😡"
+            animationView.animation = Animation.named("Animations/angry")
         } else {
-            sentimentLabel.text = "🤮"
+            animationView.animation = Animation.named("Animations/vomiting")
         }
+        animationView.play()
     }
     
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
 }
 
