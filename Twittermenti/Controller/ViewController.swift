@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swifter
 
 class ViewController: UIViewController {
     
@@ -20,7 +21,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func predictPressed(_ sender: Any) {
-    
     
     }
     
